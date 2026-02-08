@@ -1,0 +1,103 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.hero {
+    padding: var(--spacing-xl) 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+
+    @include mobile {
+        min-height: auto;
+        padding: 4rem 0;
+        text-align: center;
+    }
+}
+
+.container {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+
+    @include mobile {
+        align-items: center;
+    }
+}
+
+.title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--text-color);
+
+    span {
+        color: var(--primary-color);
+        background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @include mobile {
+        font-size: 2.5rem;
+    }
+}
+
+.description {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 90%;
+
+    @include mobile {
+        font-size: 1.125rem;
+    }
+}
+
+.actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+
+    @include mobile {
+        flex-direction: column;
+        width: 100%;
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.image-container {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius-lg);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    @include mobile {
+        margin-top: var(--spacing-lg);
+    }
+}

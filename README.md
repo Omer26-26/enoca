@@ -1,0 +1,75 @@
+# Mini Landing + Bileşen Kütüphanesi
+
+Bu proje, React, TypeScript ve SCSS kullanılarak geliştirilmiş modern, performanslı ve erişilebilir bir "Mini Landing Page" ve "Bileşen Kütüphanesi" örneğidir.
+
+## 🚀 Özellikler
+
+-   **Modern Teknoloji Yığını:** React 18, TypeScript, Vite.
+-   **Özel Bileşen Kütüphanesi:** Button, Input, Card, Modal, Accordion (Harici UI kütüphanesi kullanılmadan, sıfırdan geliştirildi).
+-   **SCSS Mimarisi:** CSS Değişkenleri, Mixin'ler ve BEM metodolojisi ile ölçeklenebilir stil yapısı.
+-   **Tema Desteği:** Entegre Light / Dark mode desteği ve kolay geçiş anahtarı.
+-   **Erişilebilirlik (a11y):** WAI-ARIA standartlarına uygun, klavye ve ekran okuyucu dostu bileşenler.
+-   **Performans Odaklı:** Lazy loading, WebP görsel optimizasyonu ve kod bölme (code splitting).
+-   **Duyarlı Tasarım (Responsive):** Mobil öncelikli (mobile-first) yaklaşım ile tüm cihazlarda kusursuz görünüm.
+
+## 🛠️ Kurulum ve Çalıştırma
+
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
+
+1.  **Repoyu klonlayın:**
+    ```bash
+    git clone https://github.com/kullaniciadi/mini-landing-lib.git
+    cd mini-landing-lib
+    ```
+
+2.  **Bağımlılıkları yükleyin:**
+    ```bash
+    npm install
+    ```
+
+3.  **Geliştirme sunucusunu başlatın:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Projeyi derleyin (Build):**
+    ```bash
+    npm run build
+    ```
+
+## 📂 Proje Yapısı
+
+```
+src/
+├── components/
+│   ├── layout/          # Header vb. düzen bileşenleri
+│   ├── sections/        # Landing page bölümleri (Hero, Features, Pricing...)
+│   └── ui/              # Temel UI bileşenleri (Button, Input, Card...)
+├── styles/
+│   ├── _mixins.scss     # Responsive breakpoint ve yardımcı mixin'ler
+│    ├── _reset.scss      # CSS sıfırlama ve odak (focus) yönetimi
+    ├── _variables.scss  # Renk, font, boşluk değişkenleri ve Dark Mode tanımları
+    └── main.scss        # Global stil dosyası
+├── App.tsx              # Ana uygulama ve bileşen demoları
+└── main.tsx             # Giriş noktası
+```
+
+## 🎨 Renk Paleti
+
+Proje, `src/styles/_variables.scss` dosyasında tanımlanan CSS değişkenlerini kullanır. Ana renkler:
+
+-   **Primary:** İndigo (#6366f1)
+-   **Secondary:** Pembe (#ec4899)
+-   **Background:** Nötr açık/koyu tonlar
+
+## 🧩 Bileşenler
+
+-   **Button:** Farklı varyantlar (primary, secondary, outline, ghost), boyutlar ve yüklenme durumu.
+-   **Input:** Label, hata mesajı, yardımcı metin ve erişilebilirlik özellikleri.
+-   **Card:** İçerik kutuları için esnek yapı (default, elevated, outlined).
+-   **Modal:** Focus trap, portal ve animasyonlu açılır pencere.
+-   **Accordion:** SSS vb. alanlar için açılır/kapanır paneller.
+
+## 📄 Lisans
+
+Bu proje MIT lisansı ile lisanslanmıştır.
