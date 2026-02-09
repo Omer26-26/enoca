@@ -99,13 +99,15 @@ function App() {
 
           <section style={{ marginBottom: '4rem' }}>
             <h2>Accordion</h2>
-            <Accordion
-              items={[
-                { id: '1', title: 'Soru 1: Bu proje nedir?', content: 'Bu, React + Vite ile hazırlanmış mini bir landing page projesidir.' },
-                { id: '2', title: 'Soru 2: Hangi teknolojiler kullanıldı?', content: 'React, TypeScript, SCSS ve Vite kullanıldı. Hiçbir UI kütüphanesi kullanılmadı.' },
-                { id: '3', title: 'Soru 3: Erişilebilir mi?', content: 'Evet, tüm bileşenler WAI-ARIA standartlarına uygun olarak geliştirildi.' },
-              ]}
-            />
+            <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+              <Accordion
+                items={[
+                  { id: '1', title: 'Soru 1: Bu proje nedir?', content: 'Bu, React + Vite ile hazırlanmış mini bir landing page projesidir.' },
+                  { id: '2', title: 'Soru 2: Hangi teknolojiler kullanıldı?', content: 'React, TypeScript, SCSS ve Vite kullanıldı. Hiçbir UI kütüphanesi kullanılmadı.' },
+                  { id: '3', title: 'Soru 3: Erişilebilir mi?', content: 'Evet, tüm bileşenler WAI-ARIA standartlarına uygun olarak geliştirildi.' },
+                ]}
+              />
+            </div>
           </section>
         </div>
       </main>
