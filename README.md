@@ -74,16 +74,20 @@ Proje, `src/styles/_variables.scss` dosyasında tanımlanan CSS değişkenlerini
 ## 📊 Lighthouse Performans Raporu
 
 **Skorlar:**
-- 🟢 **Performans:** 98/100
+- 🟢 **Performans:** 96/100
 - 🟢 **Erişilebilirlik:** 100/100
 - 🟢 **En İyi Uygulamalar:** 100/100
-- 🟢 **SEO:** 91/100
-
-*(SEO puanı için meta description eklendi, sonraki testte yükselecektir.)*
+- 🟢 **SEO:** 100/100
 
 ### Mobil
 ![Lighthouse Raporu - Mobil](./public/lighthouse-report.png)
 
+**Skorlar:**
+- 🟢 **Performans:** 100/100
+- 🟢 **Erişilebilirlik:** 100/100
+- 🟢 **En İyi Uygulamalar:** 100/100
+- 🟢 **SEO:** 100/100
+  
 ### Masaüstü
 ![Lighthouse Raporu - Masaüstü](./public/lighthouse-report-desktop.png)
 
