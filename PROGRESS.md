@@ -38,7 +38,7 @@ Bugün proje üzerinde kapsamlı UI, erişilebilirlik, performans ve dökümanta
 
 ---
 
-# 📅 07.02.2026 - Performans ve Optimize Çalışmaları
+# 📅 08.02.2026 - Performans ve Optimize Çalışmaları
 ## ✅ Tamamlanan Görevler
 - **Lazy Loading:** Sayfa yüklenme hızını artırmak için bölümler (sections) lazy load ile ayrıldı.
 - **Görsel Optimizasyonu:** WebP formatına geçiş yapıldı.
@@ -47,7 +47,7 @@ Bugün proje üzerinde kapsamlı UI, erişilebilirlik, performans ve dökümanta
 
 ---
 
-# 📅 06.02.2026 - UI Güncellemeleri
+# 📅 07.02.2026 - UI Güncellemeleri
 ## ✅ Tamamlanan Görevler
 - **Hero Button:** Ana aksiyon butonu "WTF ID ile Giriş Yap" yerine "Kayıt Ol" olarak güncellendi.
 - **Yönlendirme:** Buton hedefi `/register` sayfasına yönlendirildi.
