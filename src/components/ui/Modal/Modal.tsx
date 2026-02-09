@@ -41,7 +41,7 @@ export const Modal: React.FC<ModalProps> = ({
         return () => {
             document.body.style.overflow = 'unset';
         };
-    }, [isOpen]);
+    }, [isOpen, modalRef, previousFocusRef]);
 
     // Handle escape key
     // Handle focus trap and escape key
@@ -80,7 +80,7 @@ export const Modal: React.FC<ModalProps> = ({
 
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [isOpen, onClose]);
+    }, [isOpen, onClose, modalRef]);
 
     // Handle click outside
     const handleOverlayClick = (e: React.MouseEvent) => {

@@ -14,6 +14,7 @@ export const Header: React.FC = () => {
         const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
         setTheme(initialTheme);
         document.documentElement.setAttribute('data-theme', initialTheme);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const toggleTheme = () => {
@@ -78,7 +79,6 @@ export const Header: React.FC = () => {
                 <nav className={`${styles.nav} ${isMenuOpen ? styles['nav--open'] : ''}`}>
                     <a href="#features" className={styles.link} onClick={() => setIsMenuOpen(false)}>Özellikler</a>
                     <a href="#pricing" className={styles.link} onClick={() => setIsMenuOpen(false)}>Fiyatlandırma</a>
-                    <a href="#faq" className={styles.link} onClick={() => setIsMenuOpen(false)}>SSS</a>
                     <a href="#faq" className={styles.link} onClick={() => setIsMenuOpen(false)}>SSS</a>
                     <Button
                         size="sm"
