@@ -79,7 +79,19 @@ export const Header: React.FC = () => {
                     <a href="#features" className={styles.link} onClick={() => setIsMenuOpen(false)}>Özellikler</a>
                     <a href="#pricing" className={styles.link} onClick={() => setIsMenuOpen(false)}>Fiyatlandırma</a>
                     <a href="#faq" className={styles.link} onClick={() => setIsMenuOpen(false)}>SSS</a>
-                    <Button size="sm" onClick={() => setIsMenuOpen(false)}>İletişim</Button>
+                    <a href="#faq" className={styles.link} onClick={() => setIsMenuOpen(false)}>SSS</a>
+                    <Button
+                        size="sm"
+                        onClick={() => {
+                            setIsMenuOpen(false);
+                            const contactSection = document.getElementById('contact');
+                            if (contactSection) {
+                                contactSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}
+                    >
+                        İletişim
+                    </Button>
                 </nav>
             </div>
         </header>

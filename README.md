@@ -81,9 +81,11 @@ Proje, `src/styles/_variables.scss` dosyasında tanımlanan CSS değişkenlerini
 
 *(SEO puanı için meta description eklendi, sonraki testte yükselecektir.)*
 
-![Lighthouse Raporu](./public/lighthouse-report.png)
+### Mobil
+![Lighthouse Raporu - Mobil](./public/lighthouse-report.png)
 
-*(Not: Bu görseli eklemek için projeyi build edip analiz ettikten sonra ekran görüntüsünü `public/lighthouse-report.png` olarak kaydedin.)*
+### Masaüstü
+![Lighthouse Raporu - Masaüstü](./public/lighthouse-report-desktop.png)
 
 ## 📝 Karar Kayıtları (ADR)
 
