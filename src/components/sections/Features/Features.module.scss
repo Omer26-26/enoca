@@ -8,6 +8,8 @@
 
 .container {
     @include container;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .header {
@@ -49,6 +51,8 @@
     align-items: center;
     justify-content: center;
     margin-bottom: var(--spacing-md);
+    margin-left: auto;
+    margin-right: auto;
 
     svg {
         width: 24px;
@@ -61,6 +65,10 @@
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: var(--spacing-sm);
+}
+
+.card {
+    text-align: center;
 }
 
 .card-text {
