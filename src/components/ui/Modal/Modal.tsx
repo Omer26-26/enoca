@@ -44,10 +44,37 @@ export const Modal: React.FC<ModalProps> = ({
     }, [isOpen]);
 
     // Handle escape key
+    // Handle focus trap and escape key
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.key === 'Escape' && isOpen) {
+            if (!isOpen) return;
+
+            if (e.key === 'Escape') {
                 onClose();
+                return;
+            }
+
+            if (e.key === 'Tab') {
+                const focusableElements = modalRef.current?.querySelectorAll(
+                    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+                );
+
+                if (!focusableElements || focusableElements.length === 0) return;
+
+                const firstElement = focusableElements[0] as HTMLElement;
+                const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) {
+                        e.preventDefault();
+                        lastElement.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastElement) {
+                        e.preventDefault();
+                        firstElement.focus();
+                    }
+                }
             }
         };
 

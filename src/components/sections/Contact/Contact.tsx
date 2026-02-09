@@ -29,22 +29,20 @@ export const Contact: React.FC = () => {
 
         // Name validation
         if (!formData.name.trim()) {
-            newErrors.name = 'İsim alanı zorunludur.';
+            newErrors.name = 'Lütfen adınızı ve soyadınızı giriniz.';
         }
 
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!formData.email.trim()) {
-            newErrors.email = 'E-posta alanı zorunludur.';
+            newErrors.email = 'E-posta adresi boş bırakılamaz.';
         } else if (!emailRegex.test(formData.email)) {
-            newErrors.email = 'Geçerli bir e-posta adresi giriniz.';
+            newErrors.email = 'Lütfen geçerli bir e-posta adresi giriniz (örn: ornek@email.com).';
         }
 
         // Message validation
-        // Using Input component for simplicity, but strictly this should be a textarea
-        // Since we only have Input component as per requirements, we'll use that.
         if (!formData.message.trim()) {
-            newErrors.message = 'Mesaj alanı zorunludur.';
+            newErrors.message = 'Lütfen mesajınızı yazınız.';
         }
 
         setErrors(newErrors);
