@@ -1,14 +1,22 @@
 :root {
   /* Colors */
-  --primary-color: #6366f1; /* Indigo 500 */
-  --primary-hover: #4f46e5; /* Indigo 600 */
-  --secondary-color: #ec4899; /* Pink 500 */
+  --primary-color: #4f46e5;
+  /* Indigo 600 - was #6366f1 */
+  --primary-hover: #4338ca;
+  /* Indigo 700 - was #4f46e5 */
+  --secondary-color: #db2777;
+  /* Pink 600 - was #ec4899 */
   --background-color: #ffffff;
-  --surface-color: #f3f4f6; /* Gray 100 */
-  --text-color: #1f2937; /* Gray 800 */
-  --text-muted: #6b7280; /* Gray 500 */
-  --border-color: #e5e7eb; /* Gray 200 */
-  --error-color: #ef4444; /* Red 500 */
+  --surface-color: #f3f4f6;
+  /* Gray 100 */
+  --text-color: #111827;
+  /* Gray 900 - was #1f2937 */
+  --text-muted: #4b5563;
+  /* Gray 600 - was #6b7280 */
+  --border-color: #d1d5db;
+  /* Gray 300 - was #e5e7eb */
+  --error-color: #dc2626;
+  /* Red 600 - was #ef4444 */
 
   /* Typography */
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -29,12 +37,20 @@
 }
 
 [data-theme='dark'] {
-  --primary-color: #818cf8; /* Indigo 400 */
-  --primary-hover: #6366f1; /* Indigo 500 */
-  --secondary-color: #f472b6; /* Pink 400 */
-  --background-color: #111827; /* Gray 900 */
-  --surface-color: #1f2937; /* Gray 800 */
-  --text-color: #f9fafb; /* Gray 50 */
-  --text-muted: #9ca3af; /* Gray 400 */
-  --border-color: #374151; /* Gray 700 */
+  --primary-color: #818cf8;
+  /* Indigo 400 */
+  --primary-hover: #6366f1;
+  /* Indigo 500 */
+  --secondary-color: #f472b6;
+  /* Pink 400 */
+  --background-color: #111827;
+  /* Gray 900 */
+  --surface-color: #1f2937;
+  /* Gray 800 */
+  --text-color: #f9fafb;
+  /* Gray 50 */
+  --text-muted: #9ca3af;
+  /* Gray 400 */
+  --border-color: #374151;
+  /* Gray 700 */
 }

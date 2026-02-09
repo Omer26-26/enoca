@@ -37,7 +37,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 {...props}
             >
                 {isLoading ? (
-                    <span className={styles.spinner} aria-hidden="true">Loading...</span>
+                    <>
+                        <span className={styles.spinner} aria-hidden="true" />
+                        <span className={styles['sr-only']}>Yükleniyor</span>
+                    </>
                 ) : children}
             </button>
         );

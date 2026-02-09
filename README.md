@@ -54,6 +54,15 @@ src/
 └── main.tsx             # Giriş noktası
 ```
 
+## 🏗️ Mimari Notlar
+
+Proje, **Feature-Based** ve **Atomic Design** prensiplerinin hibrit bir yapısını benimser.
+
+- **`components/ui`:** Uygulamanın en küçük yapı taşları (Button, Input, Card). Bu bileşenler "stateless" (durumsuz) veya kendi lokal state'ini yöneten, iş mantığından arındırılmış saf UI elemanlarıdır.
+- **`components/sections`:** Landing page'in ana bölümleri (Hero, Pricing, Contact). Bu bölümler UI bileşenlerini bir araya getirir ve sayfa içi yerleşimi belirler.
+- **`components/layout`:** Header, Footer gibi tüm sayfalarda ortak olan yapı taşları.
+- **Stil Yönetimi (SCSS):** `*.module.scss` dosyaları ile stil izolasyonu sağlanmıştır. Global değişkenler ve mixin'ler `src/styles` altında toplanmıştır.
+
 ## 🎨 Renk Paleti
 
 Proje, `src/styles/_variables.scss` dosyasında tanımlanan CSS değişkenlerini kullanır. Ana renkler:
@@ -61,6 +70,20 @@ Proje, `src/styles/_variables.scss` dosyasında tanımlanan CSS değişkenlerini
 -   **Primary:** İndigo (#6366f1)
 -   **Secondary:** Pembe (#ec4899)
 -   **Background:** Nötr açık/koyu tonlar
+
+## 📊 Lighthouse Performans Raporu
+
+Projenin performans, erişilebilirlik ve SEO skorlarını gösteren rapor aşağıdadır:
+
+![Lighthouse Raporu](./public/lighthouse-report.png)
+
+*(Not: Bu görseli eklemek için projeyi build edip analiz ettikten sonra ekran görüntüsünü `public/lighthouse-report.png` olarak kaydedin.)*
+
+## 📝 Karar Kayıtları (ADR)
+
+Proje sürecinde alınan teknik ve mimari kararlar `docs/` klasörü altında tutulmaktadır.
+
+- [ADR 001: Teknoloji Seçimi ve Mimari Kararlar](docs/adr-001-teknoloji-secimi.md)
 
 ## 🧩 Bileşenler
 

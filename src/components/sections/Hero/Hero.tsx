@@ -27,6 +27,7 @@ export const Hero: React.FC = () => {
                         width="600"
                         height="400"
                         loading="eager"
+                        fetchPriority="high"
                     />
                 </div>
             </div>
