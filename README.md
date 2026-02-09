@@ -73,7 +73,13 @@ Proje, `src/styles/_variables.scss` dosyasında tanımlanan CSS değişkenlerini
 
 ## 📊 Lighthouse Performans Raporu
 
-Projenin performans, erişilebilirlik ve SEO skorlarını gösteren rapor aşağıdadır:
+**Skorlar:**
+- 🟢 **Performans:** 98/100
+- 🟢 **Erişilebilirlik:** 100/100
+- 🟢 **En İyi Uygulamalar:** 100/100
+- 🟢 **SEO:** 91/100
+
+*(SEO puanı için meta description eklendi, sonraki testte yükselecektir.)*
 
 ![Lighthouse Raporu](./public/lighthouse-report.png)
 
