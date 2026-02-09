@@ -1,10 +1,6 @@
 # ADR 001: Teknoloji Seçimi ve Mimari Kararlar
 
 **Tarih:** 2026-02-07
-**Durum:** Kabul Edildi
-
-## Bağlam (Context)
-Kullanıcı, 4 günlük bir süre içinde "Mini Landing Page" ve "Custom Component Library" içeren bir proje talep etti. Projenin modern web standartlarına uygun, erişilebilir, performanslı olması ve harici UI kütüphaneleri (MUI, Tailwind vb.) kullanılmadan geliştirilmesi istendi.
 
 ## Karar (Decision)
 Aşağıdaki teknoloji yığını ve mimari yaklaşımlar seçilmiştir:
