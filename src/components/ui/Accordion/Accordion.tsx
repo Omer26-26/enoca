@@ -26,6 +26,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         } else {
             setHeight(0);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isOpen]);
 
     return (
