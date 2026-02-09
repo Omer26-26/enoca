@@ -35,3 +35,19 @@ Bugün proje üzerinde kapsamlı UI, erişilebilirlik, performans ve dökümanta
 ## 🔜 Sonraki Adımlar
 - Vercel/Netlify üzerinde canlı deployment kontrolü.
 - (Opsiyonel) Test kapsamının artırılması (Unit tests).
+
+---
+
+# 📅 07.02.2026 - Performans ve Optimize Çalışmaları
+## ✅ Tamamlanan Görevler
+- **Lazy Loading:** Sayfa yüklenme hızını artırmak için bölümler (sections) lazy load ile ayrıldı.
+- **Görsel Optimizasyonu:** WebP formatına geçiş yapıldı.
+- **Erişilebilirlik:** Klavye navigasyonu ve renk kontrastları üzerinde ilk denetimler yapıldı.
+- **README:** Proje dökümantasyonunun iskeleti oluşturuldu.
+
+---
+
+# 📅 06.02.2026 - UI Güncellemeleri
+## ✅ Tamamlanan Görevler
+- **Hero Button:** Ana aksiyon butonu "WTF ID ile Giriş Yap" yerine "Kayıt Ol" olarak güncellendi.
+- **Yönlendirme:** Buton hedefi `/register` sayfasına yönlendirildi.
