@@ -29,7 +29,7 @@ function App() {
           <Contact />
         </Suspense>
 
-        <div style={{ padding: '2rem', maxWidth: '600px', margin: '0 auto' }}>
+        <div style={{ padding: '2rem', maxWidth: '600px', width: '100%', margin: '0 auto' }}>
           <h1>Mini Landing Lib - Bileşen Önizleme</h1>
 
           <section style={{ marginBottom: '2rem' }}>
