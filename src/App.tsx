@@ -48,7 +48,7 @@ function App() {
 
           <section style={{ marginBottom: '2rem' }}>
             <h2>Inputs</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', margin: '0 auto' }}>
               <Input label="Email" placeholder="ornek@email.com" />
               <Input label="Ad Soyad" placeholder="Adınız" helperText="Tam adınızı giriniz" />
               <Input label="Hatalı Giriş" value="yanlış değer" error="Geçersiz format" readOnly />
@@ -58,7 +58,7 @@ function App() {
 
           <section style={{ marginBottom: '2rem' }}>
             <h2>Cards</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', margin: '0 auto' }}>
               <Card>
                 <h3>Default Card</h3>
                 <p>This is a standard card component.</p>
