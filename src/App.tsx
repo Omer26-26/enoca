@@ -29,7 +29,7 @@ function App() {
           <Contact />
         </Suspense>
 
-        <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
+        <div style={{ padding: '2rem', maxWidth: '600px', margin: '0 auto' }}>
           <h1>Mini Landing Lib - Bileşen Önizleme</h1>
 
           <section style={{ marginBottom: '2rem' }}>
@@ -48,7 +48,7 @@ function App() {
 
           <section style={{ marginBottom: '2rem' }}>
             <h2>Inputs</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', margin: '0 auto' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <Input label="Email" placeholder="ornek@email.com" />
               <Input label="Ad Soyad" placeholder="Adınız" helperText="Tam adınızı giriniz" />
               <Input label="Hatalı Giriş" value="yanlış değer" error="Geçersiz format" readOnly />
@@ -58,7 +58,7 @@ function App() {
 
           <section style={{ marginBottom: '2rem' }}>
             <h2>Cards</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', margin: '0 auto' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
               <Card>
                 <h3>Default Card</h3>
                 <p>This is a standard card component.</p>
@@ -99,15 +99,13 @@ function App() {
 
           <section style={{ marginBottom: '4rem' }}>
             <h2>Accordion</h2>
-            <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-              <Accordion
-                items={[
-                  { id: '1', title: 'Soru 1: Bu proje nedir?', content: 'Bu, React + Vite ile hazırlanmış mini bir landing page projesidir.' },
-                  { id: '2', title: 'Soru 2: Hangi teknolojiler kullanıldı?', content: 'React, TypeScript, SCSS ve Vite kullanıldı. Hiçbir UI kütüphanesi kullanılmadı.' },
-                  { id: '3', title: 'Soru 3: Erişilebilir mi?', content: 'Evet, tüm bileşenler WAI-ARIA standartlarına uygun olarak geliştirildi.' },
-                ]}
-              />
-            </div>
+            <Accordion
+              items={[
+                { id: '1', title: 'Soru 1: Bu proje nedir?', content: 'Bu, React + Vite ile hazırlanmış mini bir landing page projesidir.' },
+                { id: '2', title: 'Soru 2: Hangi teknolojiler kullanıldı?', content: 'React, TypeScript, SCSS ve Vite kullanıldı. Hiçbir UI kütüphanesi kullanılmadı.' },
+                { id: '3', title: 'Soru 3: Erişilebilir mi?', content: 'Evet, tüm bileşenler WAI-ARIA standartlarına uygun olarak geliştirildi.' },
+              ]}
+            />
           </section>
         </div>
       </main>
