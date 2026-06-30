@@ -1,110 +1,113 @@
-# Mini Landing + Bileşen Kütüphanesi
+# Mini Landing + Component Library
 
-Bu proje, React, TypeScript ve SCSS kullanılarak geliştirilmiş modern, performanslı ve erişilebilir bir "Mini Landing Page" ve "Bileşen Kütüphanesi" örneğidir.
+This project is a modern, performant, and accessible mini landing page and component library built with React, TypeScript, Vite, and SCSS.
 
-## 🚀 Özellikler
+## Features
 
--   **Modern Teknoloji Yığını:** React 18, TypeScript, Vite.
--   **Özel Bileşen Kütüphanesi:** Button, Input, Card, Modal, Accordion (Harici UI kütüphanesi kullanılmadan, sıfırdan geliştirildi).
--   **SCSS Mimarisi:** CSS Değişkenleri, Mixin'ler ve BEM metodolojisi ile ölçeklenebilir stil yapısı.
--   **Tema Desteği:** Entegre Light / Dark mode desteği ve kolay geçiş anahtarı.
--   **Erişilebilirlik (a11y):** WAI-ARIA standartlarına uygun, klavye ve ekran okuyucu dostu bileşenler.
--   **Performans Odaklı:** Lazy loading, WebP görsel optimizasyonu ve kod bölme (code splitting).
--   **Duyarlı Tasarım (Responsive):** Mobil öncelikli (mobile-first) yaklaşım ile tüm cihazlarda kusursuz görünüm.
+- **Modern stack:** React 19, TypeScript, and Vite
+- **Custom component library:** Button, Input, Card, Modal, and Accordion components built from scratch without an external UI library
+- **SCSS architecture:** Scalable styling with CSS variables, mixins, and BEM-inspired naming
+- **Theme support:** Integrated light/dark mode toggle
+- **Accessibility:** Keyboard-friendly and screen-reader-aware components following WAI-ARIA practices
+- **Performance focus:** Lazy loading, WebP image optimization, and code splitting
+- **Responsive design:** Mobile-first layouts that adapt across screen sizes
 
-## 🛠️ Kurulum ve Çalıştırma
+## Installation
 
-Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
+1. Clone the repository:
 
-1.  **Repoyu klonlayın:**
-    ```bash
-    git clone https://github.com/kullaniciadi/mini-landing-lib.git
-    cd mini-landing-lib
-    ```
-
-2.  **Bağımlılıkları yükleyin:**
-    ```bash
-    npm install
-    ```
-
-3.  **Geliştirme sunucusunu başlatın:**
-    ```bash
-    npm run dev
-    ```
-
-4.  **Projeyi derleyin (Build):**
-    ```bash
-    npm run build
-    ```
-
-## 📂 Proje Yapısı
-
+```bash
+git clone https://github.com/Omer26-26/enoca.git
+cd enoca
 ```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Build for production:
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```text
 src/
 ├── components/
-│   ├── layout/          # Header vb. düzen bileşenleri
-│   ├── sections/        # Landing page bölümleri (Hero, Features, Pricing...)
-│   └── ui/              # Temel UI bileşenleri (Button, Input, Card...)
+│   ├── layout/          # Layout components such as Header
+│   ├── sections/        # Landing page sections such as Hero, Features, Pricing
+│   └── ui/              # Base UI components such as Button, Input, Card
 ├── styles/
-│   ├── _mixins.scss     # Responsive breakpoint ve yardımcı mixin'ler
-│    ├── _reset.scss      # CSS sıfırlama ve odak (focus) yönetimi
-    ├── _variables.scss  # Renk, font, boşluk değişkenleri ve Dark Mode tanımları
-    └── main.scss        # Global stil dosyası
-├── App.tsx              # Ana uygulama ve bileşen demoları
-└── main.tsx             # Giriş noktası
+│   ├── _mixins.scss     # Responsive breakpoints and helper mixins
+│   ├── _reset.scss      # CSS reset and focus handling
+│   ├── _variables.scss  # Colors, fonts, spacing, and dark mode variables
+│   └── main.scss        # Global styles
+├── App.tsx              # Main app and component demos
+└── main.tsx             # Application entry point
 ```
 
-## 🏗️ Mimari Notlar
+## Architecture Notes
 
-Proje, **Feature-Based** ve **Atomic Design** prensiplerinin hibrit bir yapısını benimser.
+The project follows a hybrid of feature-based organization and Atomic Design principles.
 
-- **`components/ui`:** Uygulamanın en küçük yapı taşları (Button, Input, Card). Bu bileşenler "stateless" (durumsuz) veya kendi lokal state'ini yöneten, iş mantığından arındırılmış saf UI elemanlarıdır.
-- **`components/sections`:** Landing page'in ana bölümleri (Hero, Pricing, Contact). Bu bölümler UI bileşenlerini bir araya getirir ve sayfa içi yerleşimi belirler.
-- **`components/layout`:** Header, Footer gibi tüm sayfalarda ortak olan yapı taşları.
-- **Stil Yönetimi (SCSS):** `*.module.scss` dosyaları ile stil izolasyonu sağlanmıştır. Global değişkenler ve mixin'ler `src/styles` altında toplanmıştır.
+- **`components/ui`:** Small reusable UI primitives such as Button, Input, and Card. These components are either stateless or manage only local UI state.
+- **`components/sections`:** Landing page sections such as Hero, Pricing, and Contact. These sections compose UI primitives into page-level layouts.
+- **`components/layout`:** Shared layout pieces such as Header and Footer.
+- **SCSS modules:** Component-level style isolation with shared variables and mixins under `src/styles`.
 
-## 🎨 Renk Paleti
+## Color Palette
 
-Proje, `src/styles/_variables.scss` dosyasında tanımlanan CSS değişkenlerini kullanır. Ana renkler:
+The project uses CSS variables defined in `src/styles/_variables.scss`.
 
--   **Primary:** İndigo (#6366f1)
--   **Secondary:** Pembe (#ec4899)
--   **Background:** Nötr açık/koyu tonlar
+- **Primary:** Indigo (`#6366f1`)
+- **Secondary:** Pink (`#ec4899`)
+- **Background:** Neutral light and dark tones
 
-## 📊 Lighthouse Performans Raporu
+## Lighthouse Report
 
-**Skorlar:**
-- 🟢 **Performans:** 96/100
-- 🟢 **Erişilebilirlik:** 100/100
-- 🟢 **En İyi Uygulamalar:** 100/100
-- 🟢 **SEO:** 100/100
+### Mobile
 
-### Mobil
-![Lighthouse Raporu - Mobil](./public/lighthouse-report.png)
+- **Performance:** 96/100
+- **Accessibility:** 100/100
+- **Best Practices:** 100/100
+- **SEO:** 100/100
 
-**Skorlar:**
-- 🟢 **Performans:** 100/100
-- 🟢 **Erişilebilirlik:** 100/100
-- 🟢 **En İyi Uygulamalar:** 100/100
-- 🟢 **SEO:** 100/100
-  
-### Masaüstü
-![Lighthouse Raporu - Masaüstü](./public/lighthouse-report-desktop.png)
+![Lighthouse report - mobile](./public/lighthouse-report.png)
 
-## 📝 Karar Kayıtları (ADR)
+### Desktop
 
-Proje sürecinde alınan teknik ve mimari kararlar `docs/` klasörü altında tutulmaktadır.
+- **Performance:** 100/100
+- **Accessibility:** 100/100
+- **Best Practices:** 100/100
+- **SEO:** 100/100
 
-- [ADR 001: Teknoloji Seçimi ve Mimari Kararlar](docs/adr-001-teknoloji-secimi.md)
+![Lighthouse report - desktop](./public/lighthouse-report-desktop.png)
 
-## 🧩 Bileşenler
+## Architecture Decision Records
 
--   **Button:** Farklı varyantlar (primary, secondary, outline, ghost), boyutlar ve yüklenme durumu.
--   **Input:** Label, hata mesajı, yardımcı metin ve erişilebilirlik özellikleri.
--   **Card:** İçerik kutuları için esnek yapı (default, elevated, outlined).
--   **Modal:** Focus trap, portal ve animasyonlu açılır pencere.
--   **Accordion:** SSS vb. alanlar için açılır/kapanır paneller.
+Technical and architectural decisions are documented under `docs/`.
 
-## 📄 Lisans
+- [ADR 001: Technology Choice and Architecture Decisions](docs/adr-001-teknoloji-secimi.md)
 
-Bu proje MIT lisansı ile lisanslanmıştır.
+## Components
+
+- **Button:** Variants, sizes, and loading state
+- **Input:** Label, error message, helper text, and accessibility support
+- **Card:** Flexible content container with multiple visual variants
+- **Modal:** Portal-based modal with focus management and animation
+- **Accordion:** Expandable/collapsible panels for FAQ-style content
+
+## License
+
+This project is licensed under the MIT License.
+
