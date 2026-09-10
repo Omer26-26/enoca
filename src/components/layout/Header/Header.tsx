@@ -4,24 +4,22 @@ import { Button } from '../../ui';
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
-
-    // Initialize theme based on system preference or storage
-    useEffect(() => {
+    const [theme, setTheme] = useState<'light' | 'dark'>(() => {
         const storedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        return storedTheme || (prefersDark ? 'dark' : 'light');
+    });
 
-        const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
-        setTheme(initialTheme);
-        document.documentElement.setAttribute('data-theme', initialTheme);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
 
     const toggleTheme = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
+        setTheme(currentTheme => {
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            return newTheme;
+        });
     };
 
     return (

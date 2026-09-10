@@ -24,7 +24,7 @@ cd enoca
 2. Install dependencies:
 
 ```bash
-npm install
+npm ci
 ```
 
 3. Start the development server:
@@ -109,5 +109,5 @@ Technical and architectural decisions are documented under `docs/`.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './Accordion.module.scss';
 
 interface AccordionItemProps {
@@ -16,19 +16,6 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
     onClick,
     id
 }) => {
-    const contentRef = useRef<HTMLDivElement>(null);
-    const [height, setHeight] = useState<number | undefined>(isOpen ? undefined : 0);
-
-    useEffect(() => {
-        if (isOpen) {
-            const scrollHeight = contentRef.current?.scrollHeight;
-            setHeight(scrollHeight);
-        } else {
-            setHeight(0);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isOpen]);
-
     return (
         <div className={styles.item}>
             <h3>
@@ -59,9 +46,9 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
                 role="region"
                 aria-labelledby={`trigger-${id}`}
                 className={styles.content}
-                style={{ height: height !== undefined ? `${height}px` : undefined }}
+                hidden={!isOpen}
             >
-                <div ref={contentRef} className={styles['content-inner']}>
+                <div className={styles['content-inner']}>
                     {children}
                 </div>
             </div>

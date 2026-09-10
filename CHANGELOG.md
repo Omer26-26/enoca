@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Updated React and refreshed the npm lockfile to current compatible dependency versions.
+- Expanded CI coverage to supported Node.js 20, 22, and 24 releases.
+
+### Security
+- Added weekly Dependabot updates and a production dependency audit to CI.
+
 ## [0.1.0] - 2026-02-09
 
 ### Added
